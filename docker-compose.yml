@@ -1,0 +1,35 @@
+version: "3"
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_dev:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "test"
+      POSTGRES_PASSWORD: "test"
+      POSTGRES_DB: "test"
+
+  web:
+    build: "./packages/web"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./packages/web:/app:delegated
+      - /app/node_modules
+    command: "yarn dev"
+
+  api:
+    depends_on:
+      - postgres
+    build: "./packages/api"
+    ports:
+      - "4000:3000"
+    command: "yarn start:dev"
+    volumes:
+      - ./packages/api:/app:delegated
+      - /app/node_modules
+
+volumes:
+  db_dev:
