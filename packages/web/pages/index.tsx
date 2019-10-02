@@ -1,18 +1,35 @@
 import * as React from 'react'
-import Link from 'next/link'
 import Layout from '../components/Layout'
 import { NextPage } from 'next'
 import { withApollo } from '../lib/apollo'
+import { useQuery } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+
+const PRODUCTS = gql`
+  query Products {
+    products {
+      id
+      name
+      description
+    }
+  }
+`
 
 const IndexPage: NextPage = () => {
+  const { data, loading, error } = useQuery(PRODUCTS)
+  // console.log({ data, loading, error })
+  if (loading) {
+    return <div>loading...</div>
+  }
+  if (error || !data) {
+    return null
+  }
+
   return (
     <Layout title="Home | Next.js + TypeScript Example">
-      <h1>Hello Next.js 👋</h1>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
+      {data.products.map((p: any) => (
+        <div key={p.id}>{p.name}</div>
+      ))}
     </Layout>
   )
 }
