@@ -9,7 +9,7 @@ const PRODUCTS = gql`
   query Products {
     products {
       id
-      name
+      title
       description
     }
   }
@@ -28,7 +28,7 @@ const IndexPage: NextPage = () => {
   return (
     <Layout title="Home | Next.js + TypeScript Example">
       {data.products.map((p: any) => (
-        <div key={p.id}>{p.name}</div>
+        <div key={p.id}>{p.title}</div>
       ))}
     </Layout>
   )
