@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common'
-import { AppController } from './app.controller'
-import { AppService } from './app.service'
 import { TypeOrmModule } from '@nestjs/typeorm'
+import { GraphQLModule } from '@nestjs/graphql'
+import { ProductsModule } from './products/products.module'
+
+const { NODE_ENV } = process.env
 
 @Module({
   imports: [
@@ -12,11 +14,16 @@ import { TypeOrmModule } from '@nestjs/typeorm'
       username: 'test',
       password: 'test',
       database: 'test',
-      entities: [],
+      logging: NODE_ENV !== 'production',
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    GraphQLModule.forRoot({
+      debug: NODE_ENV !== 'production',
+      playground: NODE_ENV !== 'production',
+      autoSchemaFile: 'schema.gql',
+    }),
+    ProductsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}

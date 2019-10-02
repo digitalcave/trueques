@@ -24,6 +24,7 @@ services:
     depends_on:
       - postgres
     build: "./packages/api"
+    env_file: ./packages/api/.env
     ports:
       - "4000:3000"
     command: "yarn start:dev"
