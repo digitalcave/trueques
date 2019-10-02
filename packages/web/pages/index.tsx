@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import { NextPage } from 'next'
-import { withApollo } from '../lib/apollo'
+import { withApollo } from '../utils/apollo'
 import { useQuery } from '@apollo/react-hooks'
-import { Button } from 'antd'
+import Button from '@material-ui/core/Button'
 import gql from 'graphql-tag'
 
 const PRODUCTS = gql`
@@ -31,7 +31,7 @@ const IndexPage: NextPage = () => {
       {data.products.map((p: any) => (
         <div key={p.id}>{p.title}</div>
       ))}
-      <Button type="primary">Boton de prueba</Button>
+      <Button>Boton de prueba</Button>
     </Layout>
   )
 }
