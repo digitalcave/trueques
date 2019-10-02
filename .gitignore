@@ -25,10 +25,6 @@ yarn-error.log*
 *.pyc
 __pycache__
 
-
-# built packages
-packages/*/lib
-
 # gatsby
 .cache
 packages/client/public
