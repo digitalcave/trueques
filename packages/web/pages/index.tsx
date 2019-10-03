@@ -16,6 +16,8 @@ const PRODUCTS = gql`
   }
 `
 
+const pepe = undefined_var
+
 const IndexPage: NextPage = () => {
   const { data, loading, error } = useQuery(PRODUCTS)
   // console.log({ data, loading, error })
