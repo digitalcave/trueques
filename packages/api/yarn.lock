@@ -752,20 +752,15 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@^12.7.5":
-  version "12.7.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.8.tgz#cb1bf6800238898bc2ff6ffa5702c3cadd350708"
-  integrity sha512-FMdVn84tJJdV+xe+53sYiZS4R5yn1mAIxfj+DVoNiQjTYz1+OYmjwEZr1ev9nU0axXwda0QDbYl06QHanRVH3A==
+"@types/node@*", "@types/node@^12.6.2", "@types/node@^12.7.5":
+  version "12.7.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.9.tgz#da0210f91096aa67138cf5afd04c4d629f8a406a"
+  integrity sha512-P57oKTJ/vYivL2BCfxCC5tQjlS8qW31pbOL6qt99Yrjm95YdHgNZwjrTTjMBh+C2/y6PXIX4oz253+jUzxKKfQ==
 
 "@types/node@^10.1.0":
   version "10.14.19"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.19.tgz#f52742c7834a815dedf66edfc8a51547e2a67342"
   integrity sha512-j6Sqt38ssdMKutXBUuAcmWF8QtHW1Fwz/mz4Y+Wd9mzpBiVFirjpNQf363hG5itkG+yGaD+oiLyb50HxJ36l9Q==
-
-"@types/node@^12.6.2":
-  version "12.7.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.9.tgz#da0210f91096aa67138cf5afd04c4d629f8a406a"
-  integrity sha512-P57oKTJ/vYivL2BCfxCC5tQjlS8qW31pbOL6qt99Yrjm95YdHgNZwjrTTjMBh+C2/y6PXIX4oz253+jUzxKKfQ==
 
 "@types/range-parser@*":
   version "1.2.3"
@@ -6857,9 +6852,9 @@ type-fest@^0.5.2:
   integrity sha512-DWkS49EQKVX//Tbupb9TFa19c7+MK1XmzkrZUR8TAktmE/DizXoaoJV6TZ/tSIPXipqNiRI6CyAe7x69Jb6RSw==
 
 type-graphql@^0.17.3, type-graphql@^0.17.5:
-  version "0.17.5"
-  resolved "https://registry.yarnpkg.com/type-graphql/-/type-graphql-0.17.5.tgz#7f2f189ff7b9faef33537291ef333ff9adbee21c"
-  integrity sha512-wscr63K0j9UKcX/nBTySamLd7nMZeYKmADk8A9sVmcPh+clNJUAw96784dg2VZn/sUdmN1y2AeKzmTjCfVB5sA==
+  version "0.17.6"
+  resolved "https://registry.yarnpkg.com/type-graphql/-/type-graphql-0.17.6.tgz#2a939df607f7ca2924986fd0c0b8c753835d7d01"
+  integrity sha512-UFZaMMnpae3zeu9qCdWN82hm8wQeYu/+sQFbG5v3vlTtctZ9Xle9bvNi/rzSbQaG94K9Y5O5AGxjVKKMpEAMYA==
   dependencies:
     "@types/glob" "^7.1.1"
     "@types/node" "^12.6.2"
